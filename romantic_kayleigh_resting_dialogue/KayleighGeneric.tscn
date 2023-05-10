@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/misc_utils/actions/composites/RandomBranch.gd" type="Script" id=1]
+[ext_resource path="res://nodes/actions/CheckConditionAction.gd" type="Script" id=2]
+[ext_resource path="res://nodes/actions/MessageDialogAction.gd" type="Script" id=3]
+[ext_resource path="res://nodes/actions/Cutscene.gd" type="Script" id=4]
+[ext_resource path="res://addons/misc_utils/actions/composites/Selector.gd" type="Script" id=5]
+
+[node name="Cutscene" type="Node"]
+script = ExtResource( 4 )
+require_partner_id = "kayleigh"
+
+[node name="Selector" type="Node" parent="."]
+script = ExtResource( 5 )
+
+	[node name="CheckConditionAction" type="Node" parent="Selector"]
+	script = ExtResource( 2 )
+	require_partner_relationship_min = 1
+
+		[node name="RandomBranch" type="Node" parent="Selector/CheckConditionAction"]
+		script = ExtResource( 1 )
+
+			[node name="RandomBranch" type="Node" parent="Selector/CheckConditionAction/RandomBranch"]
+			script = ExtResource( 1 )
+
+				[node name="MessageDialogAction" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_DATING_1" ]
+
+				[node name="MessageDialogAction2" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_DATING_2" ]
+
+				[node name="MessageDialogAction3" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_DATING_3" ]
+
+				[node name="MessageDialogAction4" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_DATING_4" ]
+
+				[node name="MessageDialogAction5" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_DATING_5" ]
+
+				[node name="MessageDialogAction6" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "RESTING_KAYLEIGH_PLATONIC_4" ]
+
+				[node name="MessageDialogAction7" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_1" ]
+
+				[node name="MessageDialogAction8" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_2" ]
+
+				[node name="MessageDialogAction9" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_3" ]
+
+				[node name="MessageDialogAction10" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_4" ]
+				
+				[node name="MessageDialogAction11" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_5" ]
+				
+				[node name="MessageDialogAction12" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_6" ]
+				
+				[node name="MessageDialogAction13" type="Node" parent="Selector/CheckConditionAction/RandomBranch/RandomBranch"]
+				script = ExtResource( 3 )
+				messages = [ "MOD_RKRD_GENERAL_7" ]
+
+			[node name="CheckConditionAction" type="Node" parent="Selector/CheckConditionAction/RandomBranch"]
+			script = ExtResource( 2 )
+			deny_scene_path = "Gramophone"
+
+				[node name="RandomBranch" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction"]
+				script = ExtResource( 1 )
+
+					[node name="MessageDialogAction14" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "RESTING_KAYLEIGH_PLATONIC_5" ]
+
+					[node name="MessageDialogAction15" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_1" ]
+
+					[node name="MessageDialogAction16" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_2" ]
+
+					[node name="MessageDialogAction17" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_3" ]
+
+					[node name="MessageDialogAction18" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_4" ]
+					
+					[node name="MessageDialogAction19" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_5" ]
+					
+					[node name="MessageDialogAction20" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_6" ]
+					
+					[node name="MessageDialogAction21" type="Node" parent="Selector/CheckConditionAction/RandomBranch/CheckConditionAction/RandomBranch"]
+					script = ExtResource( 3 )
+					messages = [ "MOD_RKRD_CAMPING_7_1", "MOD_RKRD_CAMPING_7_2" ]
+
+	[node name="RandomBranch" type="Node" parent="Selector"]
+	script = ExtResource( 1 )
+
+		[node name="MessageDialogAction" type="Node" parent="Selector/RandomBranch"]
+		script = ExtResource( 3 )
+		messages = [ "RESTING_KAYLEIGH_PLATONIC_1" ]
+
+		[node name="MessageDialogAction2" type="Node" parent="Selector/RandomBranch"]
+		script = ExtResource( 3 )
+		messages = [ "RESTING_KAYLEIGH_PLATONIC_2" ]
+
+		[node name="MessageDialogAction3" type="Node" parent="Selector/RandomBranch"]
+		script = ExtResource( 3 )
+		messages = [ "RESTING_KAYLEIGH_PLATONIC_3" ]
+
+		[node name="MessageDialogAction4" type="Node" parent="Selector/RandomBranch"]
+		script = ExtResource( 3 )
+		messages = [ "RESTING_KAYLEIGH_PLATONIC_4" ]
+
+		[node name="CheckConditionAction" type="Node" parent="Selector/RandomBranch"]
+		script = ExtResource( 2 )
+		deny_scene_path = "Gramophone"
+
+			[node name="MessageDialogAction5" type="Node" parent="Selector/RandomBranch/CheckConditionAction"]
+			script = ExtResource( 3 )
+			messages = [ "RESTING_KAYLEIGH_PLATONIC_5" ]
